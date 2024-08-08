@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ExploreHere</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home" onclick="showSection('home')">Home</a></li>
+                <li><a href="#booking" onclick="showSection('booking')">Booking</a></li>
+                <li><a href="#progress" onclick="showSection('progress')">Progress</a></li>
+                <li><a href="#services" onclick="showSection('services')">Services</a></li>
+                <li><a href="#contact" onclick="showSection('contact')">Contact</a></li>
+                <li><a href="#about" onclick="showSection('about')">About</a></li>
+                <li><a href="#testimonials" onclick="showSection('testimonials')">Review</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="home" class="section">
+            <div class="content">
+                <h1>Welcome to ExploreHere</h1>
+                <p>Your trusted bike service partner. Here you Go...!</p>
+            </div>
+        </section>
+
+        <section id="services" class="section">
+            <h2>Our Services</h2>
+            <div class="service">
+                <h3>Bike Sales:</h3>
+                <p>New Bikes, Used/Pre-owned Bikes, Electric Bikes.</p>
+            </div>
+            <div class="service">
+                <h3>Financing and Insurance:</h3>
+                <p>Loan Assistance, Insurance Services.</p>
+            </div>
+            <div class="service">
+                <h3>Customization Services:</h3>
+                <p>Bike Modification, Custom Paint Jobs, Decals and Graphics.</p>
+            </div>
+            <div class="service">
+                <h3>Servicing and Maintenance:</h3>
+                <p>Regular Service Packages, Oil Change, Tire Replacement, Brake Inspection and Repair, Battery Replacement, Chain and Sprocket Maintenance, Engine Tuning.</p>
+            </div>
+            <div class="service">
+                <h3>Spare Parts:</h3>
+                <p>Genuine Spare Parts Sales, Aftermarket Parts.</p>
+            </div>
+        </section>
+
+        <section id="booking" class="section">
+            <h2>Book a Service</h2>
+            <form id="serviceForm">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required>
+
+                <label for="bikeModel">Bike Model:</label>
+                <input type="text" id="bikeModel" name="bikeModel" required>
+
+                <label for="serviceType">Service Type:</label>
+                <select id="serviceType" name="serviceType" required>
+                    <option value="basic">Bike Sales</option>
+                    <option value="premium">Financing and Insurance</option>
+                    <option value="repair">Customization Services</option>
+                    <option value="repair">Servicing and Maintenance</option>
+                    <option value="repair">Spare Parts</option>
+                </select>
+
+                <label for="date">Preferred Date:</label>
+                <input type="date" id="date" name="date" required>
+
+                <label for="payment">Payment Method:</label>
+                <select id="payment" name="payment" required>
+                    <option value="card">Credit/Debit Card</option>
+                    <option value="paypal">PayPal</option>
+                    <option value="cash">Cash on Delivery</option>
+                </select>
+
+                <label for="deliveryDate">Delivery Date Requested:</label>
+                <input type="date" id="deliveryDate" name="deliveryDate" required>
+
+                <button type="submit">Book Here</button>
+            </form>
+        </section>
+
+        <section id="progress" class="section">
+            <h2>Service Progress</h2>
+            <div class="progress-container">
+                <div class="progress-step" id="stepBooked">Booked</div>
+                <div class="progress-step" id="stepProcessing">Processing</div>
+                <div class="progress-step" id="stepReady">On-the-way</div>
+                <div class="progress-step" id="stepDelivery">Delivered</div>
+            </div>
+            <div class="progress-content">
+                <div id="statusContent">
+                    <h3>Service Booked</h3>
+                    <p>Your service has successfully booked.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="testimonials" class="section">
+            <h2>Customer Review</h2>
+            <div class="testimonial">
+                <p>"ExploreHere provided excellent service. My bike feels brand new!" - Rohit</p>
+            </div>
+            <div class="testimonial">
+                <p>"Great customer support and fast service. Highly recommended!" - Aswin Kumar</p>
+            </div>
+            <div class="testimonial">
+                <p>"Really hopeful... Enjoy with comfortable services" - Dolly Barbie</p>
+            </div>
+            <div class="testimonial">
+                <p>"Excellent services... Really good" - John</p>
+            </div>
+        </section>
+
+        <section id="contact" class="section">
+            <h2>Contact Us</h2>
+            <form id="contactForm">
+                <label for="contactName">Name:</label>
+                <input type="text" id="contactName" name="contactName" required>
+
+                <label for="contactEmail">Email:</label>
+                <input type="email" id="contactEmail" name="contactEmail" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+
+        <section id="about" class="section">
+            <h2>About Us</h2>
+            <p>At ExploreHere, we are dedicated to providing top-notch bike services. Our team of skilled mechanics ensures that your bike is in the best condition, giving you a smooth and safe ride every time.</p>
+            <h3>Benefits of Our Services</h3>
+            <ul>
+                <li><strong>Expert Mechanics:</strong> Our team consists of highly trained professionals.</li>
+                <li><strong>Quality Parts:</strong> We use only the best parts and products for repairs and maintenance.</li>
+                <li><strong>Quick Turnaround:</strong> Fast and efficient service to get you back on the road.</li>
+                <li><strong>Affordable Prices:</strong> Competitive pricing for all our services.</li>
+                <li><strong>Customer Satisfaction:</strong> We prioritize customer satisfaction and strive to exceed expectations.</li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 ExploreHere. All rights reserved.</p>
+    </footer>
+
+    <!-- Link to your JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>
